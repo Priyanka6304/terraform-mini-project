@@ -32,6 +32,17 @@ The objective of this project is to understand:
 
 ---
 
+# Project Approach
+
+This project follows a hybrid implementation approach.
+
+- AWS networking resources such as VPC, Public Subnets, Internet Gateway, Route Table, Security Group, S3 Backend Bucket, and Key Pair were created manually using AWS Console.
+- Terraform was used for infrastructure automation, including EC2 provisioning, variable management, outputs, user data scripts, and remote state configuration.
+- The objective was to gain hands-on experience with both AWS Console operations and Terraform automation.
+- This approach helped in understanding the relationship between manually created AWS infrastructure and Terraform-managed resources.
+
+---
+
 # Development Environment
 
 This project can be executed using:
