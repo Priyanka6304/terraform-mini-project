@@ -563,15 +563,16 @@ Resolution:
 Installed Git for Windows and configured Git credentials.
 
 ---
-
 # Final Successful Deployment
 
-Terraform Apply Result:
+Terraform deployment completed successfully.
+
+Terraform Apply Summary:
 
 ```text
-Resources Added: 2
-Resources Changed: 0
-Resources Destroyed: 0
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 ```
 
 ### Server 1
@@ -594,35 +595,52 @@ Public IP:
 3.110.92.25
 ```
 
+The EC2 instances were successfully launched within the manually created AWS VPC using Terraform.
+
 ---
 
-# Verification
+# Deployment Verification
 
-Opened in Browser:
+The deployed web servers were verified through browser access.
+
+### Server 1
+
+Accessed:
 
 ```text
 http://43.205.255.11
 ```
 
-Result:
+Output Verified:
 
 ```text
 Terraform Project Server 1
+Welcome to Terraform Mini Project
 ```
 
-Opened:
+### Server 2
+
+Accessed:
 
 ```text
 http://3.110.92.25
 ```
 
-Result:
+Output Verified:
 
 ```text
 Terraform Project Server 2
+Welcome to Terraform Training Project
 ```
 
+
 ---
+
+# GitHub Repository
+
+Repository URL:
+
+https://github.com/Priyanka6304/terraform-mini-project
 
 # GitHub Repository Upload Steps
 
@@ -704,7 +722,7 @@ terraform.tfstate.backup
 
 3. Delete S3 Bucket (Optional)
 
----
+-----
 
 # Final Deliverables Submitted
 
@@ -712,9 +730,8 @@ terraform.tfstate.backup
 * GitHub Repository
 * README.md
 * PROJECT_DOCUMENTATION.md
-* Screenshots
 * Terraform Apply Output
-* EC2 Verification Screenshots
+* Project Verification Details
 
 ---
 
@@ -733,6 +750,38 @@ terraform.tfstate.backup
 
 ---
 
+# Project Evidence
+
+The project was successfully implemented, validated, and tested using AWS and Terraform.
+
+Validation activities included:
+
+* Terraform initialization
+* Terraform validation
+* Terraform planning
+* Terraform deployment
+* EC2 instance provisioning
+* AWS Console verification
+* Browser-based web server testing
+* GitHub repository integration
+* Terraform resource cleanup
+
+Note:
+
+Screenshots were not retained after project completion and infrastructure cleanup.
+
+---
+
 # Conclusion
 
-Successfully implemented a Terraform Mini Project using Terraform and AWS. The project demonstrated complete lifecycle management of cloud infrastructure, including planning, provisioning, validation, troubleshooting, deployment, verification, GitHub integration, and cleanup while following Infrastructure as Code best practices.
+Successfully implemented a Terraform Mini Project using Terraform and AWS. The project demonstrated complete lifecycle management of cloud infrastructure, including planning, provisioning, validation, troubleshooting, deployment, verification, GitHub integration, and cleanup while following Infrastructure as Code (IaC) best practices.
+
+---
+
+# Author
+
+Priyanka
+
+Terraform Mini Project
+
+AWS | Terraform | Infrastructure as Code (IaC)
