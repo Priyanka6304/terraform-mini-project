@@ -1,25 +1,48 @@
-# Terraform Mini Project - Deploying 2 EC2 Instances in a Manually Created AWS VPC
+# Terraform Mini Project - Deploying Two EC2 Instances in a Manually Created AWS VPC
 
-## Project Overview
+## Project Status
 
-This project demonstrates Infrastructure as Code (IaC) using Terraform on AWS.
+✅ Completed
 
-The networking infrastructure was created manually in AWS Console, and Terraform was used to provision two EC2 instances inside the custom VPC.
+Terraform Mini Project successfully deployed, verified, documented, and uploaded to GitHub.
 
-The project covers:
+AWS | Terraform | Infrastructure as Code (IaC)
 
-* Terraform Installation
-* AWS CLI Configuration
-* Remote State Management using S3
-* Terraform Variables and Outputs
-* EC2 Provisioning
-* User Data Scripts
-* Troubleshooting Real-Time Deployment Issues
-* GitHub Integration
+This project demonstrates Infrastructure as Code (IaC) using Terraform on AWS. The networking infrastructure was created manually in AWS Console, and Terraform was used to provision two EC2 instances inside a custom VPC. The project also implements remote state management using Amazon S3.
 
 ---
 
-## AWS Services Used
+# Project Overview
+
+The project covers:
+
+* Terraform Installation and Configuration
+* AWS CLI Configuration
+* Remote State Management using Amazon S3
+* Terraform Variables and Outputs
+* EC2 Provisioning
+* User Data Scripts
+* Infrastructure as Code (IaC)
+* Troubleshooting Real-Time Deployment Issues
+* GitHub Integration and Version Control
+
+---
+
+# Key Features
+
+* Manual AWS Network Infrastructure Setup
+* Remote Terraform State Management using S3
+* Infrastructure as Code (IaC)
+* Automated EC2 Provisioning
+* User Data Automation
+* Centralized Variable Management
+* Terraform Outputs
+* GitHub Version Control
+* Real-Time Troubleshooting Documentation
+
+---
+
+# AWS Services Used
 
 * Amazon VPC
 * Public Subnets
@@ -28,14 +51,14 @@ The project covers:
 * Security Group
 * Amazon EC2
 * Amazon S3
-* IAM
+* AWS IAM
 * Terraform
 
 ---
 
-## Architecture
+# Architecture
 
-### Manually Created Resources
+## Manually Created Resources
 
 * VPC
 * Public Subnet 1
@@ -46,16 +69,71 @@ The project covers:
 * S3 Backend Bucket
 * EC2 Key Pair
 
-### Terraform Managed Resources
+## Terraform Managed Resources
 
 * EC2 Instance 1
 * EC2 Instance 2
 * User Data Scripts
-* Outputs
+* Terraform Outputs
 
 ---
 
-## Project Structure
+# Architecture Diagram
+
+```text
+                    Internet
+                        |
+                Internet Gateway
+                        |
+                  Route Table
+                        |
+       --------------------------------
+       |                              |
+ Public Subnet 1               Public Subnet 2
+       |                              |
+ EC2 Server 1                  EC2 Server 2
+       |                              |
+       --------------------------------
+                    Custom VPC
+                        |
+                Terraform Backend
+                        |
+                   S3 Bucket
+```
+
+---
+
+# Project Workflow
+
+```text
+Manual AWS Setup
+      ↓
+Create S3 Backend Bucket
+      ↓
+Configure AWS CLI
+      ↓
+Write Terraform Configuration Files
+      ↓
+terraform fmt
+      ↓
+terraform validate
+      ↓
+terraform init
+      ↓
+terraform plan
+      ↓
+terraform apply
+      ↓
+Verify EC2 Instances
+      ↓
+Push Project to GitHub
+      ↓
+terraform destroy
+```
+
+---
+
+# Project Structure
 
 ```text
 terraform/
@@ -70,12 +148,13 @@ terraform/
 ├── userdata1.sh
 ├── README.md
 ├── PROJECT_DOCUMENTATION.md
+├── screenshots/
 └── .gitignore
 ```
 
 ---
 
-## Backend Configuration
+# Backend Configuration
 
 Terraform remote state is stored in Amazon S3.
 
@@ -93,33 +172,33 @@ terraform {
 
 ---
 
-## Terraform Commands
+# Terraform Commands
 
-### Format Terraform Files
+## Format Terraform Files
 
 ```bash
 terraform fmt
 ```
 
-### Validate Configuration
+## Validate Terraform Configuration
 
 ```bash
 terraform validate
 ```
 
-### Initialize Terraform
+## Initialize Terraform
 
 ```bash
 terraform init
 ```
 
-### Generate Execution Plan
+## Generate Execution Plan
 
 ```bash
 terraform plan
 ```
 
-### Deploy Infrastructure
+## Deploy Infrastructure
 
 ```bash
 terraform apply
@@ -131,7 +210,7 @@ Type:
 yes
 ```
 
-### Destroy Infrastructure
+## Destroy Infrastructure
 
 ```bash
 terraform destroy
@@ -145,33 +224,33 @@ yes
 
 ---
 
-## AWS CLI Commands Used
+# AWS CLI Commands Used
 
-### Verify AWS CLI
+## Verify AWS CLI
 
 ```bash
 aws --version
 ```
 
-### Configure Credentials
+## Configure AWS Credentials
 
 ```bash
 aws configure
 ```
 
-### Verify Authentication
+## Verify IAM Authentication
 
 ```bash
 aws sts get-caller-identity
 ```
 
-### Verify Subnets
+## Verify Subnets
 
 ```bash
 aws ec2 describe-subnets --region ap-south-1
 ```
 
-### Verify Key Pairs
+## Verify Key Pairs
 
 ```bash
 aws ec2 describe-key-pairs --region ap-south-1
@@ -179,25 +258,25 @@ aws ec2 describe-key-pairs --region ap-south-1
 
 ---
 
-## Deployment Result
+# Deployment Result
 
-Terraform successfully provisioned:
+Terraform successfully provisioned two EC2 instances.
 
-### Server 1
+## Server 1
 
 * Instance ID: i-0c54c56bd85a05bd7
 * Public IP: 43.205.255.11
 
-### Server 2
+## Server 2
 
 * Instance ID: i-0d449f9e0db2b3884
 * Public IP: 3.110.92.25
 
 ---
 
-## Verification
+# Verification
 
-Open in browser:
+### Server 1
 
 ```text
 http://43.205.255.11
@@ -210,7 +289,7 @@ Terraform Project Server 1
 Welcome to Terraform Mini Project
 ```
 
-Open in browser:
+### Server 2
 
 ```text
 http://3.110.92.25
@@ -225,103 +304,64 @@ Welcome to Terraform Training Project
 
 ---
 
-## Screenshots
+# Project Evidence
 
-Add screenshots in a folder named:
+The project was successfully implemented, tested, and validated in AWS Cloud.
 
-```text
-screenshots/
-```
+The following activities were completed during project execution:
 
-Recommended screenshots:
+* Manual VPC creation in AWS Console
+* Public Subnet creation
+* Internet Gateway attachment
+* Route Table configuration
+* Security Group creation
+* S3 Backend Bucket creation
+* AWS CLI configuration
+* Terraform initialization
+* Terraform validation
+* Terraform planning
+* Terraform deployment
+* EC2 Instance provisioning
+* User Data script execution
+* Web Server verification
+* GitHub repository integration
+* Terraform resource cleanup
 
-1. VPC Configuration
-2. Public Subnets
-3. Route Table
-4. Internet Gateway
-5. Security Group
-6. S3 Bucket
-7. VS Code Project Structure
-8. Terraform Init Output
-9. Terraform Plan Output
-10. Terraform Apply Output
-11. Running EC2 Instances
-12. Browser Output - Server 1
-13. Browser Output - Server 2
+Verification was performed through:
 
----
+* AWS Console resource validation
+* Terraform command outputs
+* EC2 instance status checks
+* Browser-based web server testing
+* GitHub repository review
 
-## Troubleshooting Highlights
-
-### Issue 1
-
-Terraform not recognized.
-
-Resolution:
-
-Added Terraform executable to Windows Environment Variables.
-
-### Issue 2
-
-AWS CLI not recognized.
-
-Resolution:
-
-Installed AWS CLI and restarted terminal.
-
-### Issue 3
-
-No valid credential sources found.
-
-Resolution:
-
-Configured AWS credentials using:
-
-```bash
-aws configure
-```
-
-### Issue 4
-
-Invalid Subnet ID.
-
-Resolution:
-
-Verified subnet IDs from AWS Console.
-
-### Issue 5
-
-Invalid Key Pair.
-
-Resolution:
-
-Updated key pair name to:
-
-```text
-personalkeypair
-```
-
-### Issue 6
-
-Security Group and Subnet belong to different networks.
-
-Resolution:
-
-Used Security Group from the same VPC as the subnets.
+Note: Screenshots were not retained during project cleanup and are therefore not included in this repository.
 
 ---
 
-## GitHub Repository
+# Real-Time Challenges Faced
+
+| Issue                             | Resolution                                               |
+| --------------------------------- | -------------------------------------------------------- |
+| Terraform command not recognized  | Added Terraform executable path to Environment Variables |
+| AWS CLI command not recognized    | Installed AWS CLI and restarted terminal                 |
+| No valid credential sources found | Configured AWS credentials using aws configure           |
+| Invalid Subnet ID                 | Verified subnet IDs from AWS Console                     |
+| Invalid Key Pair                  | Updated key pair name in terraform.tfvars                |
+| Security Group mismatch           | Used Security Group from the same VPC                    |
+| Git authentication failure        | Configured GitHub authentication successfully            |
+
+---
+
+# GitHub Repository
 
 Repository URL:
 
-```text
 https://github.com/Priyanka6304/terraform-mini-project
-```
 
 ---
 
-## Development Environment
+# Development Environment
 
 This project can be executed using:
 
@@ -335,7 +375,68 @@ For this implementation, Visual Studio Code on Windows was used.
 
 ---
 
-## Learning Outcomes
+# Software Versions
+
+| Component        | Version            |
+| ---------------- | ------------------ |
+| Terraform        | 1.15.5             |
+| AWS Provider     | 6.x                |
+| AWS CLI          | Latest             |
+| Operating System | Windows 10         |
+| IDE              | Visual Studio Code |
+| AWS Region       | ap-south-1         |
+
+---
+
+# Cleanup Procedure
+
+To avoid unnecessary AWS charges after project completion:
+
+```bash
+terraform destroy
+```
+
+Type:
+
+```text
+yes
+```
+
+Terraform removes:
+
+* EC2 Instance 1
+* EC2 Instance 2
+
+After destroying Terraform resources:
+
+1. Delete objects from the S3 backend bucket.
+2. Delete the S3 bucket (optional).
+3. Delete manually created resources:
+
+   * Security Group
+   * Route Table
+   * Internet Gateway
+   * Subnets
+   * VPC
+
+---
+
+# Future Enhancements
+
+The following AWS services can be integrated to extend this project into a production-ready architecture:
+
+* Application Load Balancer (ALB)
+* Auto Scaling Group (ASG)
+* Amazon RDS
+* NAT Gateway
+* CloudWatch Monitoring
+* DynamoDB State Locking
+* Terraform Modules
+* CI/CD Pipeline using Jenkins or GitHub Actions
+
+---
+
+# Learning Outcomes
 
 * Terraform Fundamentals
 * Infrastructure as Code (IaC)
@@ -344,14 +445,65 @@ For this implementation, Visual Studio Code on Windows was used.
 * Remote State Management using S3
 * Variables and Outputs
 * GitHub Version Control
-* Troubleshooting Real-Time Deployment Issues
+* Troubleshooting Terraform Deployments
+* Infrastructure Lifecycle Management
 
 ---
 
-## Author
+# Skills Demonstrated
+
+## Cloud Skills
+
+* Amazon VPC Management
+* Public Subnet Configuration
+* Internet Gateway Configuration
+* Route Table Management
+* Security Group Management
+* Amazon EC2 Administration
+* Amazon S3 Backend Configuration
+* AWS IAM Authentication
+* AWS CLI Operations
+
+## Terraform Skills
+
+* Infrastructure as Code (IaC)
+* Terraform State Management
+* Remote Backend Configuration
+* Terraform Variables
+* Terraform Outputs
+* User Data Automation
+* Resource Provisioning
+* Infrastructure Lifecycle Management
+
+## DevOps Skills
+
+* Git Version Control
+* GitHub Repository Management
+* Linux Administration
+* Troubleshooting and Debugging
+* Documentation and Reporting
+* Cloud Infrastructure Deployment
+
+## Professional Skills
+
+* Problem Solving
+* Troubleshooting Real-Time Issues
+* Infrastructure Planning
+* Technical Documentation
+* Project Execution
+
+---
+
+# Author
 
 Priyanka
 
 Terraform Mini Project
 
-AWS | Terraform | Infrastructure as Code
+AWS | Terraform | Infrastructure as Code (IaC)
+
+---
+
+# Conclusion
+
+Successfully implemented a Terraform Mini Project using AWS and Terraform. The project demonstrated complete infrastructure lifecycle management including planning, provisioning, validation, troubleshooting, deployment, verification, GitHub integration, and cleanup while following Infrastructure as Code best practices.
